@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Editar Usuario</title>
+            <!-- Bootstrap 4.4.1 CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <!-- CSS Diseño de PLANTILLA-->
+            <link rel="stylesheet" type="text/css" href="style/style-header.css">
+            <link rel="stylesheet" type="text/css" href="style/validacion-formulario.css">
+
+            <link rel="stylesheet" href="style/alertify.min.css" />
+        <style type="text/css">
+           /*CSS ADICIONAL AQUÍ*/            
+
+           /*FIN CSS ADICIONAL*/
+      </style>
+
+      <script type="text/javascript">
+        alert("olaaaaa")
+        alert(document.getElementById('uno').value);
+        document.getElementById('nombres').innerHTML = document.getElementById('uno').value
+        alert(document.getElementById('uno').value);
+      </script>
+    <!-- LINK HREF Y Javascripts, JQUERY AQUÍ - USAR 4.4.1 EN LO POSIBLE-->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FIN scripts JQUERY etc aquí-->
+
+
+  </head>
+<body class="estilo-body">      
+    <div class="maqueteado-header">
+        <div class="header">
+            <div class="titulo">
+                <img src="scr/logo-full.png" width="25%">
+                <div class="usuario">
+                    <h4 class="welcome-user">Bienvenido, <b>Administrador</b></h4>                   
+                    <button type="button" class="btn btn-info btn-user" >Cerrar Sesión</button>
+                </div>
+            </div>
+        </div><!--FIN HEADER-->   
+    </div> 
+    <!--Título de la sección-->   
+    <div class="setion-title">
+      <h2 align="center"> <span class="label label-default">EDITAR USUARIO</span></h2>
+    </div>
+    <!--Contenido de la página--> 
+    <div class="content"> 
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-12">
+                <!-- CONTENIDO DEL CUERPO-->
+                <div class="row row-form">
+                      <div class="col-75">
+                        <div class="container-form">
+                            <h3>Modifique los datos que desea actualizar</h3>
+                          <form action="#" id="formulario" class="formulario">                      
+                            <div class="row">
+                              <div class="col-50">
+                                <input type="hidden" id="opcion" value="editar">
+                                <!-- Grupo: Nombre -->
+                                <div class="form-group formulario__grupo" id="grupo__nombres">
+                                    <label for="nombres" class="formulario__label"> Nombre Completo</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="form-control formulario__input" name="nombres" id="nombres" placeholder="Nombre del producto" value="" required>
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError">Campo Nombre no puede contener numeros, ni carácteres especiales</p>
+                                </div>
+                                <!-- Grupo: Correo -->
+                                <div class="form-group formulario__grupo" id="grupo__correo">
+                                  <label for="correo" class="formulario__label">Correo electrónico</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="email" class="form-control formulario__input" name="correo" id="correo" required placeholder="Email">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError"> Email debe tener un formato de correo</p>
+                                </div>
+                                <div class="form-group formulario__grupo "  id="grupo__usuario">
+                                    <label for="usuario" class="formulario__label"> Usuario</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="form-control formulario__input" name="usuario" id="usuario" placeholder="Usuario">
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError">
+                                        Campo usuario debe tener minimo maximo 4 digitos, puede contener carácteres alfanumericos, - y _.
+                                    </p>
+                               </div> 
+                              </div>
+                               <div class="col-50">
+                               <!-- Grupo: Contraseña --> 
+                                <div class="form-group formulario__grupo" id="grupo__password">
+                                  <label for="password" class="formulario__label"> Contraseña</label>
+                                  <div class="formulario__grupo-input">
+                                    <input type="password" class="form-control formulario__input" name="password" id="password" placeholder="Ingrese Contraseña" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                  </div>
+                                  <p class="formulario__input-mensajeError">Campo Password debe tener 8-30 caracteres</p>
+                                </div>                           
+                                            
+                                <div>                                    
+                                    <label for="tipo-user">Tipo de Usuario</label>
+                                    <div class="formulario__grupo-input">
+                                        <select class="form-control formulario__input" required>
+                                          <option>Administrador</option>
+                                          <option>usuario</option>
+                                          <option>Almacen</option>
+                                          <i class="formulario__validacion-estado fas fa-times-circle"></i>  
+                                        </select>
+                                        
+                                    </div>
+
+                                  </div>
+                              </div>
+                              <div class="col-100"> 
+                                <input type="submit" value="Guardar Cambios" class="btn btn-form btn-info">
+                                <a href="ListarUsuarios.html">
+                                <button type="button" class="btn btn-form btn-info" >Volver</button></a>
+                              </div>                                
+                          </form>
+
+                        </div>
+                      </div>
+                </div>
+
+
+                <!-- FIN Código CONTENIDO CUERPO-->
+                </div>
+                
+            </div> 
+        </div>
+    </div> 
+    <div class="footer">
+        <center><img class="footer-logo" src="scr/logo-full.png"></center>
+        <center><b>Derechos Reservados INVENTASOFT 2021</b></center>
+        <center><b>Misión TIC 2022</b></center>
+        <center><b>GRUPO C3-G24-Equipo 1</b></center>
+    </div>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- Javascripts JQUERY etc aquí-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="js/alertify.min.js"></script>
+      <script src="js/usuariosNuevo.js"></script>
+
+    <!-- FIN scripts JQUERY etc aquí-->
+
+</body>
+</html>

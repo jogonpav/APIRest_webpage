@@ -1,0 +1,192 @@
+.usuario{
+  float: right;
+  text-align: right;
+}
+.header{
+  margin-right: 5%;
+  margin-left: 5%;                  
+}         
+.maqueteado-header{
+    padding: 1.5%;
+    /*background: -webkit-linear-gradient(left,  #444B6E, #277554);*/
+    /*background: -webkit-linear-gradient(left,  #444B6E, #277554);*/
+    background: -webkit-linear-gradient(right,  #343a40, #17a2b8);
+    display: block;
+    overflow: auto;
+}
+.thead-table1{
+    background-color: #919399 ;
+    color: #000;
+}
+.estilo-body{              
+  background-color: #FFFFFF;
+}
+.footer {
+    background-color: #343a40;
+    color: #FFFFFF;
+    padding: 1%;
+    margin-top: 1%;
+    text-align: center;
+}
+.setion-title {
+background: #343a40;
+color: #fffffF;
+padding: 1% 0;
+
+}
+.content{
+    padding-top: 2%;
+}
+.welcome-user {
+    font-size:1.4vw;
+    color: #ffffff;
+}
+
+.footer-font {
+    font-size: 1vw;
+}
+.footer-logo {
+    width: 15%;
+    padding-bottom: 1rem;
+}
+
+.card-flex-centered{
+    display: flex; 
+    margin-top: 3rem;
+    margin-bottom: 3rem;                
+    align-items: center;
+    justify-content: center;
+}
+.card-body{
+   text-align: center;
+
+}
+.card{
+  padding: 0;
+}
+
+.boton{ 
+    width: 7rem;
+    height: 2rem;
+    padding: .5rem;
+    padding-bottom: 2rem;
+}
+
+.logo-barner {
+    width: 25%;
+}
+
+.campo-etiqueta{
+
+    font-family: "Noto Sans","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+
+}
+
+/* FORMULARIOS*/
+
+.row-form {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  }
+
+  .col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  }
+
+  .col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  }
+
+  .col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+  }
+
+  .col-25,
+  .col-50,
+  .col-75 {
+  padding: 0 16px;
+  }
+
+  .col-100{
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+    text-align:  center;
+  }
+
+  .container-form 
+  {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  }
+
+  input
+  {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  }
+
+ 
+
+  label 
+  {
+  margin-bottom: 10px;
+  display: block;
+  }
+  .btn-form
+  {   
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  }
+
+  div.dataTables_wrapper div.dataTables_filter label {
+    text-align: right !important;
+}
+
+
+/*FIN CSS FORMULARIOS*/
+
+
+
+@media only screen and (max-width: 800px){
+    
+    .logo-barner {
+        width: 35%;
+    }
+    .btn-user {
+        font-size: 2.2vw;  
+    }
+    .footer-logo {
+        width: 30% !important;
+    }
+    .welcome-user {
+        font-size:2vw;
+        color: #ffffff;
+    }
+    .footer-font {
+        font-size: 2vw;
+    }
+
+}
+
+
+
+
+/* Estilo botones*/

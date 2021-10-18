@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lista Moviemientos</title>
+        <!-- Bootstrap 4.4.1 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">   
+        <!-- CSS Diseño de PLANTILLA-->
+        <link rel="stylesheet" type="text/css" href="style/style-header.css">
+        <link rel="stylesheet" type="text/css" href="style/style-modal.css">
+        <style type="text/css">             
+           /*CSS ADICIONAL AQUÍ*/          
+        .modalDialog > div {
+            
+            margin: 5% auto !important;
+          
+        }
+           /*FIN CSS ADICIONAL*/
+        </style>
+
+
+      <!-- Bootstrap CSS Y LINK HREF-->
+           <!-- Required meta tags -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+          <!--  Datatables  -->
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
+
+          <!--  extension responsive  -->
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+      <!-- FIN scripts JQUERY etc aquí-->    
+  </head>
+<body class="estilo-body">      
+    <div class="maqueteado-header">
+        <div class="header">
+            <div class="titulo">
+                <img src="scr/logo-full.png" width="25%">
+                <div class="usuario">
+                    <h4 class="welcome-user">Bienvenido, <b>Administrador</b></h4>                   
+                    <button type="button" class="btn btn-info btn-user" >Cerrar Sesión</button>
+                </div>
+            </div>
+        </div><!--FIN HEADER-->   
+    </div> 
+    <!--Título de la sección-->   
+    <div class="setion-title">
+      <h2 align="center"> <span class="label label-default">LISTA DE MOVIMIENTOS</span></h2>
+    </div>
+    <!--Contenido de la página--> 
+    <div class="content"> 
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-12">
+                <!-- CONTENIDO DEL CUERPO-->
+                <a href="MenuAdministrador.html"><button  type="button" class="btn btn-secondary">Volver al menú</button></a>
+                    <table id="example" class="table table-bordered  display nowrap table-striped table-Light" cellspacing="0" width="100%">
+                        <thead class="thead-table1">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Usuario</th>
+                                <th>Tipo Movimiento</th>
+                                <th>Tipo Usuario</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>                    
+                            <tr>
+                                <td>24-09-21</td>
+                                <td>antonio2021</td>
+                                <td>entrada</td>
+                                <td>Almacén</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#openModal"><span class="glyphicon glyphicon-floppy-saved"></span> Ver Detalles</a></td>
+                            </tr>
+                            <tr>
+                                <td>23-09-21</td>
+                                <td>ivan2021</td>
+                                <td>Salida</td>
+                                <td>Almacén</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#openModal"><span class="glyphicon glyphicon-floppy-saved"></span> Ver Detalles</a></td>
+                            </tr>
+                            <tr>
+                                <td>24-09-21</td>
+                                <td>dairon2021</td>
+                                <td>entrada</td>
+                                <td>Usuario</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#openModal"><span class="glyphicon glyphicon-floppy-saved"></span> Ver Detalles</a></td>
+                            </tr>
+                            <tr>
+                                 <td>24-09-21</td>
+                                <td>johan2021</td>
+                                <td>entrada</td>
+                                <td>Usuario</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#openModal"><span class="glyphicon glyphicon-floppy-saved"></span> Ver Detalles</a></td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                        <!--<tfoot>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Referencia</th>
+                                <th>Categoria</th>
+                                <th>Stock</th>
+                                <th>Ingresa Cantidad</th>
+                                <th>Acción</th>
+                            </tr>
+                        </tfoot>-->
+                    </table>
+
+
+
+                <!-- FIN Código CONTENIDO CUERPO-->
+                </div>
+                <!-- INICIO DE VENTANA EMERGENTE-->
+                <div id="openModal" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h2><b>Detalle Moviento</b></h2>
+                        <h5>Fecha:<br> <b>* FECHA MOVIMIENTO *</b></h5>
+                        <h5>Tipo Usuario:<br> <b>* TIPO USUARIO *</b></h5>
+                        <h5>Nombre Usuario:<br> <b>* NOMBRE DEL USUARIO *</b></h5>
+                        <h5>Tipo Movimiento: <br><b>* TIPO MOVIMIENTO *</b></h5>
+                        <h5>Producto:<br> <b>* NOMBRE DEL PRODUCTO *</b></h5>
+                        <h5>Cantidad:<br> <b>* CANTIDAD *</b></h5>
+                       <br>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#close"><span class="glyphicon glyphicon-floppy-saved"></span> Volver</a></td><br><br>
+
+                    </div>
+                </div>
+                <!-- FIN DE VENTANA EMERGENTE-->
+            </div> 
+        </div>
+    </div> 
+    <div class="footer">
+        <center><img class="footer-logo" src="scr/logo-full.png"></center>
+        <center><b>Derechos Reservados INVENTASOFT 2021</b></center>
+        <center><b>Misión TIC 2022</b></center>
+        <center><b>GRUPO C3-G24-Equipo 1</b></center>
+    </div>
+    <!-- scripts JQUERY etc aquí-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--   Datatables-->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>  
+
+    <!-- extension responsive -->
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                responsive: true
+            });
+        } ); 
+        
+    </script> 
+    <!-- FIN scripts JQUERY etc aquí-->
+
+</body>
+</html>

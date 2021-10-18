@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Editar Usuario</title>
+            <!-- Bootstrap 4.4.1 CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <!-- CSS Diseño de PLANTILLA-->
+            <link rel="stylesheet" type="text/css" href="style/style-header.css">
+            <link rel="stylesheet" type="text/css" href="style/validacion-formulario.css">
+        <style type="text/css">
+           /*CSS ADICIONAL AQUÍ*/
+            .campo-cantidad{        
+                 right: 31px;
+            }
+           /*FIN CSS ADICIONAL*/
+      </style>
+    <!-- LINK HREF Y Javascripts, JQUERY AQUÍ - USAR 4.4.1 EN LO POSIBLE-->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FIN scripts JQUERY etc aquí-->
+
+
+  </head>
+<body class="estilo-body">      
+    <div class="maqueteado-header">
+        <div class="header">
+            <div class="titulo">
+                <img src="scr/logo-full.png" width="25%">
+                <div class="usuario">
+                    <h4 class="welcome-user">Bienvenido, <b>Almacén</b></h4>                   
+                    <button type="button" class="btn btn-info btn-user" >Cerrar Sesión</button>
+                </div>
+            </div>
+        </div><!--FIN HEADER-->   
+    </div> 
+    <!--Título de la sección-->   
+    <div class="setion-title">
+      <h2 align="center"> <span class="label label-default">EDITAR PRODUCTO</span></h2>
+    </div>
+    <!--Contenido de la página--> 
+    <div class="content"> 
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-12">
+                <!-- CONTENIDO DEL CUERPO-->
+                <div class="row row-form">
+                      <div class="col-75">
+                        <div class="container-form">
+                            <h3>Modifique los datos que desea actualizar</h3>
+                          <form action="#" id="formulario" class="formulario">                      
+                            <div class="row">
+                              <div class="col-50">
+                                <!-- Grupo: Nombre -->
+                               <div class="form-group formulario__grupo" id="grupo__nombres">
+                                    <label for="nombres" class="campo-etiqueta formulario__label">Nombre</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="form-control formulario__input" name="nombres" id="nombres" placeholder="Nombre del producto" value="Producto 1" required>
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError">Campo Nombre no puede contener numeros, ni carácteres especiales</p>
+                                </div>
+                                <div class="form-group formulario__grupo" id="grupo__referencia">
+                                    <label for="referencia" class="formulario__label">Referencia</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="text" class="form-control formulario__input" name="referencia" id="referencia" placeholder="Ingrese la referencia" value="Referencia" required>
+                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError">Solo Letras, numeros, #, - y _.</p>
+                                </div>
+                                <div class="form-group formulario__grupo" id="grupo__cantidad">
+                                    <label for="cantidad" class="formulario__label">Cantidad</label>
+                                    <div class="formulario__grupo-input">
+                                        <input type="number"  class="form-control formulario__input" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad" value="54" required min="0" max="9999">
+                                        <i class="campo-cantidad formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                    <p class="formulario__input-mensajeError">Cantidad entre 0 y 9999</p>
+                                </div>
+                     
+                              </div>
+                               <div class="col-50">                           
+                                    <div class="form-group formulario__grupo" id="grupo__codigo">
+                                        <label for="codigo" class="formulario__label">Código (SKU)</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="form-control formulario__input" name="codigo" id="codigo" placeholder="Ingrese el código" value="Codigo" required>
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                                        </div>
+                                        <p class="formulario__input-mensajeError">Solo Letras, numeros, #, - y _. Sin Espacios</p>
+                                    </div>
+                                    <div>
+                                    <label for="categoria">Categoria</label>
+                                        <div class="form-group formulario__grupo-input">
+                                            <select id="categoria" class="form-control formulario__input" name="categoria" required>
+                                              <option>Categoria 1</option>
+                                              <option>Categoria 2</option>
+                                              <option>Categoria 3</option>
+                                            </select>                                            
+                                      </div>                                     
+                                   </div>                               
+                              </div>
+                              <div class="col-100"> 
+                                <input type="submit" value="Guardar Cambios" class="btn btn-form btn-info">
+                                <a href="ListarProductos.html"><button type="button" name="volver-menu" value="Volver al Listado" class="btn btn-form btn-info" > Volver al Menú </button></a>
+                                
+                              </div>                                
+                          </form>
+
+                        </div>
+                      </div>
+                </div>
+
+
+                <!-- FIN Código CONTENIDO CUERPO-->
+                </div>
+                
+            </div> 
+        </div>
+    </div> 
+    <div class="footer">
+        <center><img class="footer-logo" src="scr/logo-full.png"></center>
+        <center><b>Derechos Reservados INVENTASOFT 2021</b></center>
+        <center><b>Misión TIC 2022</b></center>
+        <center><b>GRUPO C3-G24-Equipo 1</b></center>
+    </div>
+    <!-- Javascripts JQUERY etc aquí-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <!-- FIN scripts JQUERY etc aquí-->
+
+</body>
+</html>
